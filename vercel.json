@@ -2,5 +2,13 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "framework": null,
-  "rewrites": [{ "source": "/((?!static/).*)", "destination": "/index.html" }]
+  "routes": [
+    { "src": "/signaldeck/(.*)", "dest": "/api/signaldeck/$1" },
+    { "src": "/newsletter/(.*)", "dest": "/api/newsletter/$1" },
+    { "src": "/tz_detect/(.*)", "dest": "/api/tz_detect/$1" },
+    { "src": "/auth/(.*)", "dest": "/api/auth/$1" },
+    { "src": "/billing/(.*)", "dest": "/api/billing/$1" },
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
